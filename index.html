@@ -18,7 +18,7 @@
         * {
             margin: 0;
             padding: 0;
-            font-size: 14px;
+            font-size: 64px;
             font-family: "Special Elite", serif;
             font-weight: 400;
             font-style: normal;
@@ -32,13 +32,14 @@
             block-size: 100svh;
             overflow: hidden;
             font-size: 42px;
+            flex-direction: column;
         }
     </style>
 </head>
 
 <body class="">
     <div class="container" id="demo">
-        Hello wolrd
+     
     </div>
     <script>
         gsap.registerPlugin(TextPlugin, EasePack);
@@ -56,7 +57,7 @@
             for (i = 0; i < wordCount; i++) {
                 word = words[i];
                 isSentenceEnd = _sentenceEndExp.test(word);
-                element = $("<h3>" + word + "</h3>").appendTo(container);
+                element = $("<h1>" + word + "</h3>").appendTo(container);
                 duration = Math.max(0.5, word.length * 0.08); //longer words take longer to read, so adjust timing. Minimum of 0.5 seconds.
                 if (isSentenceEnd) {
                     duration += 0.6; //if it's the last word in a sentence, drag out the timing a bit for a dramatic pause.
@@ -75,7 +76,7 @@
 
         }
 
-        machineGun("These words are constantly animating in your face to suck you in and leave you hanging for what comes next. Can you handle the awesomeness? Or are you left quivering in fear? It's only text, silly. Longer words stay on the screen for a greater duration. Each sentence ends with a dramatatic pause. Yes, that pause. The End");
+        machineGun("Hello wolrd");
 
         /* learn more about the GreenSock Animation Platfrom (GSAP) for JS
         
